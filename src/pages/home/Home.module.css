@@ -1,7 +1,68 @@
-.homeBkg {
-  width: 100vw;
+.sectionHome {
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: top center;
   background-image: url("../../assets/background.png");
+  position: relative;
+}
+
+.sectionHome::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-color: #17272680;
+}
+.center {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.column {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.center h1 {
+  color: #fff;
+  font-size: 7rem;
+}
+
+.center h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.saberMais {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #ffffff15;
+  backdrop-filter: blur(2px);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.15s ease-in-out;
+}
+
+.saberMais:hover {
+  color: #050505;
+  background-color: #ffffff;
+}
+
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
 }

@@ -4,12 +4,13 @@ import styles from "./Navbar.module.css";
 export default function Navbar() {
   return (
     <div className={styles.navbar}>
-      <div className={styles.container}>
+      <div className={styles.bkg}>
+        <div className={styles.logo}>
+          <img src="logo.svg" />
+        </div>
         <div className={styles.row}>
-          <a>Início</a>
           <a>Sobre nós</a>
           <a>Comunicados</a>
-          <a>Eventos</a>
           <a>Produção</a>
           <a>Produtores</a>
           <a>Documentação</a>

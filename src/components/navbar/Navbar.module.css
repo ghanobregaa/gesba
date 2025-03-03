@@ -1,25 +1,47 @@
 .navbar {
+  padding: 1rem;
   width: 100%;
-  background-color: #ffffff15;
-  backdrop-filter: blur(5px);
   position: fixed;
-  border-bottom: 1px solid #ffffff15;
-  display: flex;
-  justify-content: center;
+  z-index: 2;
 }
 
-.container {
+.bkg {
+  width: 100%;
   margin: auto;
-  width: 1920px;
-  padding: 2rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  width: fit-content;
+  border-radius: 50px;
+  background-color: #172726;
+  backdrop-filter: blur(15px);
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0px 0px 10px 3px #24242450;
+}
+
+.logo {
+  display: flex;
+  width: 50px;
+}
+
+.logo img {
+  opacity: 0.5;
+  width: 100%;
 }
 
 .row {
   display: flex;
   gap: 1rem;
   text-transform: uppercase;
-  color: #d9d9d9;
   font-size: 14px;
+}
+
+.row a {
+  color: #fff;
+  opacity: 0.5;
+  transition: 0.15s ease-in-out;
+}
+.row a:hover {
+  opacity: 1;
+  cursor: pointer;
 }
