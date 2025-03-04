@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
-import { HiBars3, HiMiniBars3, HiMiniXMark } from "react-icons/hi2";
+import { HiBars3, HiMiniBars3, HiMiniXMark, HiXMark } from "react-icons/hi2";
 export default function Navbar() {
-  const [climate, setClimate] = useState([]);
+  const [climate, setClimate] = useState(0);
   const [open, setOpen] = useState(false);
   const [topo, setTopo] = useState(true);
   const [scrollDirection, setScrollDirection] = useState(true);
@@ -12,7 +12,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 500) {
+      if (window.scrollY <= 50) {
         setTopo(true);
       } else {
         setTopo(false);
@@ -46,7 +46,7 @@ export default function Navbar() {
         "https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/2310300.json"
       )
         .then((res) => res.json())
-        .then((data) => setClimate(data));
+        .then((data) => setClimate(data.data[0].tMax));
     } catch {}
   }
 
@@ -70,7 +70,7 @@ export default function Navbar() {
             setOpen(!open);
           }}
         >
-          {open ? <HiMiniXMark size={45} /> : <HiMiniBars3 size={35} />}
+          {open ? <HiXMark size={35} /> : <HiBars3 size={35} />}
         </div>
 
         <div className={styles.rowContent}>
