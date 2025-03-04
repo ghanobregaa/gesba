@@ -22,10 +22,10 @@
 }
 
 .topo {
-  background-color: #ffffff50;
+  background-color: #ffffff;
   backdrop-filter: blur(20px);
   transition: 0.2s ease-in-out;
-  border-color: #ffffff15;
+  border-color: #f0f0f0;
 }
 
 .open {
@@ -39,7 +39,7 @@
 .container {
   height: fit-content;
   max-width: 1432px;
-  padding: 1rem;
+  padding: 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -69,6 +69,14 @@
   font-size: 16px;
   cursor: pointer;
   transition: 0.1s ease-in-out;
+}
+
+.rowContent a:hover {
+  background-color: #ffffff25;
+}
+
+.topo .rowContent a:hover {
+  background-color: #f0f0f0;
 }
 
 .hamburguer {

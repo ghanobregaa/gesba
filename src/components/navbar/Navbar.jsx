@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <div
       className={`${styles.navbar} ${open ? styles.open : ""} ${
-        !topo ? styles.topo : ""
+        !topo ? styles.topo : styles.notTopo
       }`}
     >
       <div className={styles.container}>
