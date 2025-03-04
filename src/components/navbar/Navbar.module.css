@@ -6,7 +6,10 @@
   justify-content: center;
   opacity: 0;
   animation: opac 0.2s ease-in-out forwards;
-  transition: background-color 0.2s ease-in-out;
+
+  border-color: transparent;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 @keyframes opac {
@@ -19,8 +22,10 @@
 }
 
 .topo {
-  background-color: #fff;
+  background-color: #ffffff50;
   backdrop-filter: blur(20px);
+  transition: 0.2s ease-in-out;
+  border-color: #ffffff15;
 }
 
 .open {

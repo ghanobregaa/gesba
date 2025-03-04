@@ -90,8 +90,8 @@
 
 .section2 {
   width: 100%;
-  height: 100vh;
-  background-color: #172726;
+  height: 200vh;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

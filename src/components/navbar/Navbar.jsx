@@ -5,39 +5,21 @@ export default function Navbar() {
   const [climate, setClimate] = useState(0);
   const [open, setOpen] = useState(false);
   const [topo, setTopo] = useState(true);
-  const [scrollDirection, setScrollDirection] = useState(true);
   useEffect(() => {
     getData();
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY <= 50) {
-        setTopo(true);
-      } else {
+      if (window.scrollY > 50) {
         setTopo(false);
+      } else {
+        setTopo(true);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const updateScrollDirection = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY < lastScrollY) {
-        setScrollDirection(true); // Scrolling Up
-      } else {
-        setScrollDirection(false); // Scrolling Down
-      }
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", updateScrollDirection);
-    return () => window.removeEventListener("scroll", updateScrollDirection);
   }, []);
 
   async function getData() {
@@ -50,11 +32,11 @@ export default function Navbar() {
     } catch {}
   }
 
-  return scrollDirection || open ? (
+  return (
     <div
       className={`${styles.navbar} ${open ? styles.open : ""} ${
         !topo ? styles.topo : ""
-      } ${scrollDirection && !open ? styles.showP : ""}`}
+      }`}
     >
       <div className={styles.container}>
         <div className={styles.logo}>
@@ -89,7 +71,5 @@ export default function Navbar() {
         <a>Contactos</a>
       </div>
     </div>
-  ) : (
-    ""
   );
 }
