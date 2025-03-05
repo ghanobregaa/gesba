@@ -4,28 +4,19 @@
   z-index: 10;
   display: flex;
   justify-content: center;
-  opacity: 0;
-  animation: opac 0.2s ease-in-out forwards;
 
   border-color: transparent;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-}
 
-@keyframes opac {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  transition: background-color 0.2s ease-in-out;
 }
 
 .topo {
-  background-color: #ffffff;
+  background-color: #ffffffcc;
   backdrop-filter: blur(20px);
   transition: 0.2s ease-in-out;
-  border-color: #f0f0f0;
+  border-color: #ffffff15;
 }
 
 .open {
@@ -68,15 +59,15 @@
   border-radius: 50px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.1s ease-in-out;
 }
 
 .rowContent a:hover {
+  backdrop-filter: blur(20px);
   background-color: #ffffff25;
 }
 
 .topo .rowContent a:hover {
-  background-color: #f0f0f0;
+  background-color: #05050515;
 }
 
 .hamburguer {

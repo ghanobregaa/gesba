@@ -11,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 250) {
         setTopo(false);
       } else {
         setTopo(true);
