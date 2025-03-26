@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { HiBars3, HiMiniBars3, HiMiniXMark, HiXMark } from "react-icons/hi2";
+
 export default function Navbar() {
   const [climate, setClimate] = useState(0);
   const [open, setOpen] = useState(false);

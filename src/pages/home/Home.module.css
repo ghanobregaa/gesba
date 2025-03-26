@@ -107,6 +107,33 @@
   border-radius: 8px;
   color: #fff;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 2px solid transparent;
+  transition: 0.15s ease-in-out;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: #223837;
+  border-color: #2b4544;
+}
+
+.box:hover p {
+  opacity: 1;
+}
+
+.box h3 {
+  font-size: 24px;
+  line-height: 1.25em;
+}
+
+.box p {
+  font-size: 16px;
+  line-height: 1.5em;
+  opacity: 0.75;
+  transition: 0.15s ease-in-out;
 }
 
 .row {
