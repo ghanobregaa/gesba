@@ -19,19 +19,9 @@ export default function Home() {
       </section>
       <section className={styles.section2}>
         <div className={styles.container}>
-          <div className={styles.rowCount}>
-            <div className={styles.columnN}>
-              <div className={styles.number}>
-                <CountUp end={2900} separator=" " />
-              </div>
-              <div className={styles.subText}>Produtores</div>
-            </div>
-            <div className={styles.columnN}>
-              <div className={styles.number}>
-                <CountUp end={150101} separator=" " suffix=" kg" />
-              </div>
-              <div className={styles.subText}>Produção março</div>
-            </div>
+          <div className={styles.row}>
+            <div className={styles.box}>a</div>
+            <div className={styles.box}>a</div>
           </div>
         </div>
       </section>
