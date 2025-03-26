@@ -13,10 +13,10 @@
 }
 
 .topo {
-  background-color: #ffffffcc;
+  background-color: #fff;
   backdrop-filter: blur(20px);
   transition: 0.2s ease-in-out;
-  border-color: #ffffff15;
+  border-color: #fafafa;
 }
 
 .open {
