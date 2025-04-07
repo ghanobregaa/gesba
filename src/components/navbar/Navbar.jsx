@@ -42,9 +42,9 @@ export default function Navbar() {
       <div className={styles.container}>
         <div className={styles.logo}>
           {open || !topo ? (
-            <img src="logo_black.svg" />
+            <img src="/logo_black.svg" />
           ) : (
-            <img src="logo.svg" />
+            <img src="/logo.svg" />
           )}
         </div>
         <div
